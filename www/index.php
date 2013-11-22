@@ -11,7 +11,8 @@ define('START_TIME',   microtime(TRUE));
 define('START_MEMORY', memory_get_usage());
 
 define('ROOT_PATH',        dirname(__DIR__) . DS);
-define('NAMELESS_PATH',    ROOT_PATH . 'Nameless' . DS);
+//TODO: remove this const
+define('NAMELESS_PATH',    ROOT_PATH . 'vendor' . DS . 'corpsee' . DS . 'nameless-source' . DS . 'src' . DS . 'Nameless' . DS);
 define('APPLICATION_PATH', ROOT_PATH . 'Application' . DS);
 define('CONFIG_PATH',      APPLICATION_PATH . 'configs' . DS);
 define('PUBLIC_PATH',      ROOT_PATH . 'www' . DS);
