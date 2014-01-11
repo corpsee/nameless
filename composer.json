@@ -14,7 +14,7 @@
 		}
 	],
 	"require": {
-		"corpsee/nameless-source": "dev-master"
+		"corpsee/nameless-source": "0.1.x"
 	},
 	"autoload":
 	{
