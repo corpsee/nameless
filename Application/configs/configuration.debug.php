@@ -20,9 +20,10 @@ return array
 		),
 	),
 
-	'modules'     => array
+	'modules' => array
 	(
-		'Logger', 'Assets', 'Imager', 'Database','Validation','Auto','Mailer',
+		'Logger',
+		'Assets',
 	),
 
 	'assets' => array

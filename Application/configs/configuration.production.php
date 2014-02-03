@@ -20,8 +20,9 @@ return array
 		),
 	),
 
-	'modules'     => array
+	'modules' => array
 	(
-		'Logger', 'Assets'
+		'Logger',
+		'Assets',
 	),
 );
