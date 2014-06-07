@@ -19,5 +19,5 @@ require_once ROOT_PATH . 'vendor' . DS . 'autoload.php';
 use Nameless\Core\Kernel;
 use Nameless\Core\Console;
 
-$console = new Console(new Kernel(), 'Nameless', '0.2.0');
+$console = new Console(new Kernel(), 'Nameless', '0.2.1');
 $console->run();

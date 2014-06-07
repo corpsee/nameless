@@ -1,7 +1,9 @@
-composer.phar
-.git
-.idea
-sessions
-temp
-vendor
-composer.lock
+/.idea
+/vendor
+/composer.phar
+/session
+/temp
+/logs/*
+/www/index.php
+/Application/cache/*
+/Application/configs/configuration.php
