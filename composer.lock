@@ -4,20 +4,20 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6df200e0a27c6406f38ba13e136257ce",
+    "hash": "1027bfd28c1e79590899e23fc00a9800",
     "packages": [
         {
             "name": "corpsee/nameless-source",
-            "version": "0.2.1",
+            "version": "0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/corpsee/nameless-source.git",
-                "reference": "6f6977db773ce7f996bc2ca75ed48fc683aad40c"
+                "reference": "e3b300f8618dc107477a59438c90746e962ab102"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/corpsee/nameless-source/zipball/6f6977db773ce7f996bc2ca75ed48fc683aad40c",
-                "reference": "6f6977db773ce7f996bc2ca75ed48fc683aad40c",
+                "url": "https://api.github.com/repos/corpsee/nameless-source/zipball/e3b300f8618dc107477a59438c90746e962ab102",
+                "reference": "e3b300f8618dc107477a59438c90746e962ab102",
                 "shasum": ""
             },
             "require": {
@@ -39,7 +39,8 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Nameless\\": "src"
+                    "Nameless\\": "src",
+                    "NamelessTests\\": "tests"
                 },
                 "files": [
                     "src/Core/functions/functions.php"
@@ -62,7 +63,7 @@
                 "framework",
                 "nameless"
             ],
-            "time": "2014-06-07 07:54:28"
+            "time": "2014-06-08 05:44:30"
         },
         {
             "name": "kriswallsmith/assetic",
