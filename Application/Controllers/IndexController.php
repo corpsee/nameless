@@ -2,15 +2,23 @@
 
 namespace Application\Controllers;
 
+use Nameless\Core\Localization;
 use Nameless\Core\Template;
 use Nameless\Core\Controller;
+use Nameless\Modules\Assets\AssetsDispatcher;
 
 class IndexController extends Controller
 {
     public function index()
     {
-        $this->container['localization']->load('index');
-        $this->container['localization']->load('index', 'application', 'en');
+        /** @var Localization $localization */
+        $localization = $this->container['localization'];
+
+        /** @var AssetsDispatcher $dispatcher */
+        $dispatcher   = $this->container['assets.dispatcher'];
+
+        $localization->load('index');
+        $localization->load('index', 'application', 'en');
 
         $styles = [
             '/files/lib/bootstrap/2.3.2/css/bootstrap.css',
@@ -27,14 +35,14 @@ class IndexController extends Controller
             'title'       => 'Nameless framework demo page',
             'description' => 'Nameless framework demo page',
             'keywords'    => 'Nameless framework demo page',
-            'h2_en'       => $this->container['localization']->get('h2', 'en'),
-            'p_en'        => $this->container['localization']->get('p', 'en'),
-            'btn_en'      => $this->container['localization']->get('btn', 'en'),
-            'h2_ru'       => $this->container['localization']->get('h2'),
-            'p_ru'        => $this->container['localization']->get('p'),
-            'btn_ru'      => $this->container['localization']->get('btn'),
-            'styles'      => $this->container['assets.dispatcher']->getAssets('frontend', $styles),
-            'scripts'     => $this->container['assets.dispatcher']->getAssets('frontend', $scripts),
+            'h2_en'       => $localization->get('h2', 'en'),
+            'p_en'        => $localization->get('p', 'en'),
+            'btn_en'      => $localization->get('btn', 'en'),
+            'h2_ru'       => $localization->get('h2'),
+            'p_ru'        => $localization->get('p'),
+            'btn_ru'      => $localization->get('btn'),
+            'styles'      => $dispatcher->getAssets('frontend', $styles),
+            'scripts'     => $dispatcher->getAssets('frontend', $scripts),
             'subtemplate' => 'subindex',
         );
         $data_filters = [
