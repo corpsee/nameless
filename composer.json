@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "corpsee/nameless-source": "0.3.*"
+        "corpsee/nameless-source": "*"
     },
     "autoload": {
         "psr-4": {
