@@ -4,28 +4,30 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1027bfd28c1e79590899e23fc00a9800",
+    "hash": "e9d60106012ba7c4c2aeb8796f774895",
     "packages": [
         {
             "name": "corpsee/nameless-source",
-            "version": "0.2.2",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/corpsee/nameless-source.git",
-                "reference": "e3b300f8618dc107477a59438c90746e962ab102"
+                "reference": "b3fb444159589121c427fa9804fda99a22f9b98e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/corpsee/nameless-source/zipball/e3b300f8618dc107477a59438c90746e962ab102",
-                "reference": "e3b300f8618dc107477a59438c90746e962ab102",
+                "url": "https://api.github.com/repos/corpsee/nameless-source/zipball/b3fb444159589121c427fa9804fda99a22f9b98e",
+                "reference": "b3fb444159589121c427fa9804fda99a22f9b98e",
                 "shasum": ""
             },
             "require": {
                 "kriswallsmith/assetic": "1.1.*",
                 "leafo/lessphp": "0.4.*",
                 "monolog/monolog": "1.7.*",
+                "php": ">=5.4.0",
                 "pimple/pimple": "1.1.*",
-                "swiftmailer/swiftmailer": "5.0.*",
+                "psr/log": "1.0.*",
+                "swiftmailer/swiftmailer": "5.2.*",
                 "symfony/console": "2.3.*",
                 "symfony/debug": "2.3.*",
                 "symfony/event-dispatcher": "2.3.*",
@@ -34,13 +36,13 @@
                 "symfony/routing": "2.3.*"
             },
             "require-dev": {
-                "phpunit/phpunit": "3.7.*"
+                "phpunit/phpunit": "4.1.*"
             },
-            "type": "library",
+            "type": "framework",
             "autoload": {
                 "psr-4": {
                     "Nameless\\": "src",
-                    "NamelessTests\\": "tests"
+                    "Nameless\\Tests\\": "tests"
                 },
                 "files": [
                     "src/Core/functions/functions.php"
@@ -63,7 +65,7 @@
                 "framework",
                 "nameless"
             ],
-            "time": "2014-06-08 05:44:30"
+            "time": "2014-10-18 02:58:24"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -337,25 +339,28 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.0.3",
+            "version": "v5.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "32edc3b0de0fdc1b10f5c4912e8677b3f411a230"
+                "reference": "e02f71a35436af4bd58a1bd90116089e632e29e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/32edc3b0de0fdc1b10f5c4912e8677b3f411a230",
-                "reference": "32edc3b0de0fdc1b10f5c4912e8677b3f411a230",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/e02f71a35436af4bd58a1bd90116089e632e29e1",
+                "reference": "e02f71a35436af4bd58a1bd90116089e632e29e1",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
+            "require-dev": {
+                "mockery/mockery": "~0.9.1"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.1-dev"
+                    "dev-master": "5.2-dev"
                 }
             },
             "autoload": {
@@ -369,13 +374,11 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
+                    "name": "Chris Corbyn"
                 },
                 {
-                    "name": "Chris Corbyn"
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Swiftmailer, free feature-rich PHP mailer",
@@ -384,7 +387,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2013-12-03 13:33:24"
+            "time": "2014-09-20 07:17:36"
         },
         {
             "name": "symfony/console",
@@ -393,12 +396,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "c6c5a354a9945a5e9a9a6a495ca19558eb8639e9"
+                "reference": "aa12ac573c583a74c2cb26ad9be478e119f04ad1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/c6c5a354a9945a5e9a9a6a495ca19558eb8639e9",
-                "reference": "c6c5a354a9945a5e9a9a6a495ca19558eb8639e9",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/aa12ac573c583a74c2cb26ad9be478e119f04ad1",
+                "reference": "aa12ac573c583a74c2cb26ad9be478e119f04ad1",
                 "shasum": ""
             },
             "require": {
@@ -427,19 +430,17 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2014-05-14 13:35:53"
+            "time": "2014-10-05 13:45:10"
         },
         {
             "name": "symfony/debug",
@@ -448,12 +449,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Debug.git",
-                "reference": "ca764f8af9cc4ba5d81b598c1b18b30db5508e18"
+                "reference": "883f847ad179e92549a8cea372b08e5ef47ffe40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Debug/zipball/ca764f8af9cc4ba5d81b598c1b18b30db5508e18",
-                "reference": "ca764f8af9cc4ba5d81b598c1b18b30db5508e18",
+                "url": "https://api.github.com/repos/symfony/Debug/zipball/883f847ad179e92549a8cea372b08e5ef47ffe40",
+                "reference": "883f847ad179e92549a8cea372b08e5ef47ffe40",
                 "shasum": ""
             },
             "require": {
@@ -485,19 +486,17 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony Debug Component",
             "homepage": "http://symfony.com",
-            "time": "2014-04-29 19:42:43"
+            "time": "2014-10-09 16:42:17"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -506,12 +505,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "cb7cd38c081507d10997553c4c522956a4d2afab"
+                "reference": "3e0b837811fadd73c833c7c06a92201d953df59d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/cb7cd38c081507d10997553c4c522956a4d2afab",
-                "reference": "cb7cd38c081507d10997553c4c522956a4d2afab",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/3e0b837811fadd73c833c7c06a92201d953df59d",
+                "reference": "3e0b837811fadd73c833c7c06a92201d953df59d",
                 "shasum": ""
             },
             "require": {
@@ -541,19 +540,17 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2014-04-16 10:30:19"
+            "time": "2014-10-01 05:39:06"
         },
         {
             "name": "symfony/http-foundation",
@@ -562,12 +559,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "5ee6f13e927b08454fc6bc0f2f8fcc1dbcbae452"
+                "reference": "74c7ed7ea3296af79a5c17e9b9763939164062a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/5ee6f13e927b08454fc6bc0f2f8fcc1dbcbae452",
-                "reference": "5ee6f13e927b08454fc6bc0f2f8fcc1dbcbae452",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/74c7ed7ea3296af79a5c17e9b9763939164062a6",
+                "reference": "74c7ed7ea3296af79a5c17e9b9763939164062a6",
                 "shasum": ""
             },
             "require": {
@@ -593,19 +590,17 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2014-06-05 12:50:34"
+            "time": "2014-10-09 16:42:17"
         },
         {
             "name": "symfony/http-kernel",
@@ -614,12 +609,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpKernel.git",
-                "reference": "a3f794f25f56d07caa76d7ff293c39a42b8bde29"
+                "reference": "17bb005e32fcf23b801a7b397fa755a4837375a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/a3f794f25f56d07caa76d7ff293c39a42b8bde29",
-                "reference": "a3f794f25f56d07caa76d7ff293c39a42b8bde29",
+                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/17bb005e32fcf23b801a7b397fa755a4837375a9",
+                "reference": "17bb005e32fcf23b801a7b397fa755a4837375a9",
                 "shasum": ""
             },
             "require": {
@@ -666,19 +661,17 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "http://symfony.com",
-            "time": "2014-06-01 15:15:00"
+            "time": "2014-10-01 05:39:06"
         },
         {
             "name": "symfony/process",
@@ -687,12 +680,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "e4b5fcd31ce60a0721fb36d6478de0185afe744b"
+                "reference": "2f0db541a7de08dbe5a4b55acfbaf8e3e6b029d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/e4b5fcd31ce60a0721fb36d6478de0185afe744b",
-                "reference": "e4b5fcd31ce60a0721fb36d6478de0185afe744b",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/2f0db541a7de08dbe5a4b55acfbaf8e3e6b029d9",
+                "reference": "2f0db541a7de08dbe5a4b55acfbaf8e3e6b029d9",
                 "shasum": ""
             },
             "require": {
@@ -715,19 +708,17 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2014-05-23 14:36:49"
+            "time": "2014-10-01 05:53:11"
         },
         {
             "name": "symfony/routing",
@@ -736,12 +727,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing.git",
-                "reference": "6e4c9024a04340b83e456a1a24597dba066dcdc9"
+                "reference": "f7f8ebf9c99e5ebfdb908c3558a818c2883eab1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Routing/zipball/6e4c9024a04340b83e456a1a24597dba066dcdc9",
-                "reference": "6e4c9024a04340b83e456a1a24597dba066dcdc9",
+                "url": "https://api.github.com/repos/symfony/Routing/zipball/f7f8ebf9c99e5ebfdb908c3558a818c2883eab1f",
+                "reference": "f7f8ebf9c99e5ebfdb908c3558a818c2883eab1f",
                 "shasum": ""
             },
             "require": {
@@ -751,6 +742,7 @@
                 "doctrine/common": "~2.2",
                 "psr/log": "~1.0",
                 "symfony/config": "~2.2",
+                "symfony/http-foundation": "~2.3",
                 "symfony/yaml": "~2.0"
             },
             "suggest": {
@@ -775,25 +767,24 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony Routing Component",
             "homepage": "http://symfony.com",
-            "time": "2014-04-23 13:35:47"
+            "time": "2014-10-13 12:38:27"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": [],
+    "prefer-stable": false,
     "platform": [],
     "platform-dev": []
 }
