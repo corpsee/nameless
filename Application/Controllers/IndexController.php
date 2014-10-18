@@ -21,13 +21,15 @@ class IndexController extends Controller
         $localization->load('index', 'application', 'en');
 
         $styles = [
-            '/files/lib/bootstrap/2.3.2/css/bootstrap.css',
+            //'/files/lib/bootstrap/2.3.2/css/bootstrap.css',
+            '/files/lib/bootstrap/3.2.0/css/bootstrap.css',
             '/files/css/nameless.less',
         ];
 
         $scripts = [
             '/files/lib/jquery/1.10.2/jquery.js',
-            '/files/lib/bootstrap/2.3.2/js/bootstrap.js',
+            //'/files/lib/bootstrap/2.3.2/js/bootstrap.js',
+            '/files/lib/bootstrap/3.2.0/js/bootstrap.js',
         ];
 
         $data = array
@@ -49,15 +51,7 @@ class IndexController extends Controller
             'styles'  => Template::FILTER_RAW,
             'scripts' => Template::FILTER_RAW,
         ];
-        return $this->render('index', $data, Template::FILTER_ESCAPE, $data_filters);
 
-        /*$image = $this->container['imager.image']
-            ->open(PUBLIC_PATH . 'observer_origin.jpg')
-            ->resize(1000)->save(PUBLIC_PATH . 'observer_origin_resize_1000.jpg', 'image/jpeg')
-            ->crop(300, 200)
-            ->save(PUBLIC_PATH . 'observer_origin_crop_200x100.jpg', 'image/jpeg')
-            ->grayscale()
-            ->save(PUBLIC_PATH . 'observer_origin_gray.jpg', 'image/jpeg');
-        exit();*/
+        return $this->render('index', $data, Template::FILTER_ESCAPE, $data_filters);
     }
 }
