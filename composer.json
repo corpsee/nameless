@@ -1,26 +1,27 @@
 {
-	"name":        "corpsee/nameless",
-	"description": "Yet another framework based on Symfony Components.",
-	"type":        "library",
-	"keywords":    ["framework", "nameless"],
-	"license":     "MIT",
-	"authors":     [{
-			"name":     "Corpsee",
-			"email":    "poisoncorpsee@gmail.com",
-			"homepage": "http://corpsee.com",
-			"role":     "Developer"
-		}
-	],
-	"require": {
-		"corpsee/nameless-source": "0.2.*"
-	},
-	"autoload": {
-		"psr-4": {
-			"Application\\": "Application"
-		}
-	},
-	"config": {
-		"preferred-install": "dist"
-	},
-	"minimum-stability": "dev"
+    "name":        "corpsee/nameless",
+    "description": "Yet another framework based on Symfony Components.",
+    "type":        "library",
+    "keywords": ["framework", "nameless"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name":     "Corpsee",
+            "email":    "poisoncorpsee@gmail.com",
+            "homepage": "http://corpsee.com",
+            "role":     "Developer"
+        }
+    ],
+    "require": {
+        "corpsee/nameless-source": "0.2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Application\\": "Application"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev"
 }
