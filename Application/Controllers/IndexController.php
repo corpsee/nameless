@@ -26,7 +26,7 @@ class IndexController extends Controller
         ];
 
         $scripts = [
-            '/files/lib/jquery/1.10.2/jquery.js',
+            '/files/lib/jquery/1.11.1/jquery.js',
             '/files/lib/bootstrap/3.2.0/js/bootstrap.js',
         ];
 
