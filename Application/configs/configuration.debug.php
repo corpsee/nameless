@@ -1,30 +1,24 @@
 <?php
 
-return array
-(
+return [
     // production, test, debug
     'environment' => 'debug',
     'timezone'    => 'Asia/Novosibirsk',
     'locale'      => 'ru',
     'language'    => 'ru',
-    'routes' => array
-    (
-        'index' => array
-        (
+    'routes'      => [
+        'index' => [
             'pattern'  => '/',
-            'defaults' => array
-            (
+            'defaults' => [
                 '_controller' => 'Application\\Controllers\\IndexController::index',
-            ),
-        ),
-    ),
-    'modules' => array
-    (
+            ],
+        ],
+    ],
+    'modules' => [
         'Logger',
         'Assets',
-    ),
-    'assets' => array
-    (
+    ],
+    'assets' => [
         'java_path' => 'C:\\Program files\\Java\\jre6\\bin\\java.exe',
-    ),
-);
+    ],
+];

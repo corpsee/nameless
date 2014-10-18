@@ -1,26 +1,21 @@
 <?php
 
-return array
-(
+return [
     // production, test, debug
     'environment' => 'production',
     'timezone'    => 'Asia/Novosibirsk',
     'locale'      => 'ru',
     'language'    => 'ru',
-    'routes' => array
-    (
-        'index' => array
-        (
+    'routes'      => [
+        'index' => [
             'pattern'  => '/',
-            'defaults' => array
-            (
+            'defaults' => [
                 '_controller' => 'Application\\Controllers\\IndexController::index',
-            ),
-        ),
-    ),
-    'modules' => array
-    (
+            ],
+        ],
+    ],
+    'modules' => [
         'Logger',
         'Assets',
-    ),
-);
+    ],
+];

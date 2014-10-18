@@ -12,17 +12,15 @@ class IndexController extends Controller
         $this->container['localization']->load('index');
         $this->container['localization']->load('index', 'application', 'en');
 
-        $styles = array
-        (
+        $styles = [
             '/files/lib/bootstrap/2.3.2/css/bootstrap.css',
             '/files/css/nameless.less',
-        );
+        ];
 
-        $scripts = array
-        (
+        $scripts = [
             '/files/lib/jquery/1.10.2/jquery.js',
             '/files/lib/bootstrap/2.3.2/js/bootstrap.js',
-        );
+        ];
 
         $data = array
         (
@@ -39,11 +37,10 @@ class IndexController extends Controller
             'scripts'     => $this->container['assets.dispatcher']->getAssets('frontend', $scripts),
             'subtemplate' => 'subindex',
         );
-        $data_filters = array
-        (
+        $data_filters = [
             'styles'  => Template::FILTER_RAW,
             'scripts' => Template::FILTER_RAW,
-        );
+        ];
         return $this->render('index', $data, Template::FILTER_ESCAPE, $data_filters);
 
         /*$image = $this->container['imager.image']
