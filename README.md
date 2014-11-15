@@ -3,12 +3,7 @@ Nameless Framework
 
 Install
 -------
-Download this branch zip-package https://github.com/corpsee/nameless/archive/master.zip, put composer.phar to the root directory and install:
-
+You can install Nameless framework via Composer:
 ```bash
-php composer.phar install
+php composer.phar create-project corpsee/nameless sample-app-dir 0.4.0 --prefer-dist
 ```
-
-License
--------
-For the full copyright and license information, please see the LICENSE.
