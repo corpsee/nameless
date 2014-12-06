@@ -6,4 +6,4 @@
 /logs/*
 /www/index.php
 /Application/cache/*
-/Application/configs/configuration.php
+/Application/configs/config.php
