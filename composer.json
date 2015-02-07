@@ -13,6 +13,8 @@
         }
     ],
     "require": {
+        "php":                     ">=5.4.0",
+        "ext-mbstring":            "*",
         "corpsee/nameless-source": "0.4.*"
     },
     "autoload": {
