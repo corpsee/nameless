@@ -15,7 +15,7 @@
     "require": {
         "php":                     ">=5.4.0",
         "ext-mbstring":            "*",
-        "corpsee/nameless-source": "0.4.*"
+        "corpsee/nameless-source": "0.5.*"
     },
     "autoload": {
         "psr-4": {
