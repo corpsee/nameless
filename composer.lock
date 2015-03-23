@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5982dcafad38bd87905a00f2b17c7698",
+    "hash": "5bca01e6fa52c6e8e9600537a5c30a87",
     "packages": [
         {
             "name": "corpsee/nameless-source",
@@ -1325,6 +1325,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=5.4.0",
+        "ext-mbstring": "*"
+    },
     "platform-dev": []
 }
