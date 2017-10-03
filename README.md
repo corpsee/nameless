@@ -1,3 +1,5 @@
+**This package is abandoned and no longer maintained.**
+
 Nameless framework demo application
 ===================================
 
